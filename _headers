@@ -1,0 +1,5 @@
+/admin/*
+  Content-Type: text/plain
+
+/admin/config.yml
+  Content-Type: text/yaml
