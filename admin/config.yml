@@ -1,27 +1,28 @@
+
+
 backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/images"       # где хранятся загруженные фото
-public_folder: "/images"            # путь на сайте: ваш-сайт.netlify.app/images/...
+media_folder: "static/images"
+public_folder: "/static/images"
 
 collections:
   - name: "gallery"
     label: "Галерея работ"
-    folder: "static/collections/gallery"   # путь в репо, где отдельные файлы (например, photo-1.json или .md)
+    folder: "static/collections/gallery"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Описание", name: "description", widget: "string" }
-      - { label: "Фото", name: "image", widget: "image" }
+      - {label: "Описание", name: "description", widget: "string"}
+      - {label: "Фото", name: "image", widget: "image"}
 
   - name: "reviews"
-    label: "Отзывы"
+    label: "Отзывы клиентов"
     folder: "static/collections/reviews"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Имя клиента", name: "name", widget: "string" }
-      - { label: "Текст отзыва", name: "text", widget: "text" }
-      # добавь фото если нужно: { label: "Фото", name: "image", widget: "image", required: false }
+      - {label: "Имя клиента", name: "name", widget: "string"}
+      - {label: "Текст отзыва", name: "text", widget: "text"}добавь фото если нужно: { label: "Фото", name: "image", widget: "image", required: false }
 
