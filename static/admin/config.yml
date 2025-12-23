@@ -1,0 +1,25 @@
+  backend:
+    name: git-gateway
+    branch: main
+
+  media_folder: "static/images"
+  public_folder: "/static/images"
+
+  collections:
+    - name: "gallery"
+      label: "Галерея работ"
+      folder: "static/collections/gallery"
+      create: true
+      slug: "{{slug}}"
+      fields:
+        - {label: "Описание", name: "description", widget: "string", default: "Новое фото работы"}
+        - {label: "Фото", name: "image", widget: "image"}
+
+    - name: "reviews"
+      label: "Отзывы клиентов"
+      folder: "static/collections/reviews"
+      create: true
+      slug: "{{slug}}"
+      fields:
+        - {label: "Имя клиента", name: "name", widget: "string"}
+        - {label: "Текст отзыва", name: "text", widget: "text"}
